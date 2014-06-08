@@ -66,10 +66,10 @@ function check_sanity {
 		die "Feathur must be installed on Debian 6."
 	fi
 
-	if [ ! 6 == $(awk -F. '{print $1}' /etc/debian_version) ]
+	if [ ! 7 == $(awk -F. '{print $1}' /etc/debian_version) ]
 	then
-		status "Feathur must be installed on Debian 6."
-		die "Feathur must be installed on Debian 6."
+		status "Feathur must be installed on Debian 7."
+		die "Feathur must be installed on Debian 7."
 	fi
 }
 
@@ -141,8 +141,8 @@ status "Beginning installation phase 1 of 2"
 # Begin Install Phase 1
 ############################################################
 
-echo "deb http://dotdeb.feathur.com/dotdeb stable all" >> /etc/apt/sources.list
-wget -qO - http://dotdeb.feathur.com/dotdeb/dotdeb.gpg | apt-key add -
+#echo "deb http://dotdeb.feathur.com/dotdeb stable all" >> /etc/apt/sources.list
+#wget -qO - http://dotdeb.feathur.com/dotdeb/dotdeb.gpg | apt-key add -
 apt-get update
 status "Installing necessary software:"
 
